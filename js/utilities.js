@@ -6,6 +6,8 @@ function setProductQuantityById(Id, isIncrement) {
 
   if (isIncrement) {
     newQuantity = previousQuantity + 1;
+  } else if (previousQuantity === 0) {
+    newQuantity = previousQuantity;
   } else {
     newQuantity = previousQuantity - 1;
   }
